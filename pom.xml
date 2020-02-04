@@ -7,6 +7,37 @@
     <groupId>org.example</groupId>
     <artifactId>Project2</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
+    <parent>
+        <artifactId>reva-pom</artifactId>
+        <groupId>com.revature</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+<dependencies>
+    <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+        <version>4.0.1</version>
+
+    </dependency>
+</dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>LocalTomcat</server>
+                    <path>/Project_2</path>
+                    <update>true</update>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
